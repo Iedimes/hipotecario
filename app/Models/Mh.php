@@ -8,6 +8,10 @@ use OwenIt\Auditing\Auditable as AuditableTrait;
 
 class Mh extends Model implements Auditable
 {
+    use AuditableTrait;
+
+    protected $guarded = [];
+
     protected $table = 'mh';
 
     protected $fillable = [
@@ -30,9 +34,7 @@ class Mh extends Model implements Auditable
     ];
 
 
-    use AuditableTrait;
 
-    protected $guarded = [];
 
     public $timestamps = false;
 
